@@ -8,17 +8,18 @@
 <body>
    <div class="container center">
      <h1>Product Mgt</h1>
-     <p>Spring Boot + JPA + Thymeleaf</p>
+     <p class="subtitle">Spring Boot + JPA + Thymeleaf</p>
 
-     <a class="btn" href="/products">Products List</a>
-     <a class="btn" href="/products/new">Add product</a>
+     <div class="actions">
+       <a class="btn" href="/products">Products List</a>
+       <a class="btn" href="/products/new">Add product</a>
+     </div>
 
-
-       <form action="/findProduct" method="POST">
-           product-name: <input type="text" name="name">
-           <button type="submit">search</button>
-
-       </form>
+     <form class="search-form" action="/findProduct" method="POST">
+       <label for="search-name">Product name</label>
+       <input id="search-name" class="input" type="text" name="name" placeholder="Search by name">
+       <button class="btn" type="submit">Search</button>
+     </form>
    </div>
 
 </body>

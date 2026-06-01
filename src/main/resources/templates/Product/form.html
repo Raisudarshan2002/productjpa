@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-<form action="/products" method="post" enctype="multipart/form-data">
-  ProductName: <input type="text" name="name"><br>
-  Price: <input type="text" name="price"><br>
-  Stock: <input type="text" name="stock"><br>
-  Description : <textarea name="description" ></textarea>
-  Image : <input type="file" name="imageFile" accept="image/*">
-  <button type="submit">Save</button>
-
-</form>
-<a class="btn" href="/products">Go to List</a>
+<div class="container">
+  <h1>Add Product</h1>
+  <form class="form" action="/products" method="post" enctype="multipart/form-data">
+    <div class="form-row">
+      <label for="product-name">Product Name</label>
+      <input id="product-name" class="input" type="text" name="name">
+    </div>
+    <div class="form-row">
+      <label for="product-price">Price</label>
+      <input id="product-price" class="input" type="text" name="price">
+    </div>
+    <div class="form-row">
+      <label for="product-stock">Stock</label>
+      <input id="product-stock" class="input" type="text" name="stock">
+    </div>
+    <div class="form-row">
+      <label for="product-description">Description</label>
+      <textarea id="product-description" class="input" name="description"></textarea>
+    </div>
+    <div class="form-row">
+      <label for="product-image">Image</label>
+      <input id="product-image" class="input" type="file" name="imageFile" accept="image/*">
+    </div>
+    <div class="form-actions">
+      <button class="btn" type="submit">Save</button>
+      <a class="btn secondary" href="/products">Go to List</a>
+    </div>
+  </form>
+</div>
 
 </body>
 </html>
